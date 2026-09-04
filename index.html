@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StockFlow es un dashboard administrativo para gestionar invesntario, ventas y productos">
+    <title>StockFlow | Dashboard de Inventario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!--Checkbox utilizado para contorlar el estado del sidebar-->
+    <input
+        type="checkbox" 
+        id="sidebar-toggle"
+        class="sidebar-toggle"
+        aria-label="Mostrar u ocultar barra lateral"
+    >
+    <div class="dashboard">
+        <!-- Sidebar -->
+         <aside class="sidebar" id="sidebar" aria-label="Barra lateral de navegación">
+            <div class="sidebar-header">
+                <a href="#" class="brand" arial-label="StockFlow inicio">
+                    <span class="brand-icon" aria-hidden="true">S</span>
+                    <span class="brand-name">Stock <span>Flow</span></span>
+                </a>
+                <label 
+                    for="sidebar-toggle" 
+                    class="sidebar-collapse"
+                    title="Colapsar menú"
+                    aria-label="Colapsar menú"
+                >
+                    <span aria-hidden="true">☰</span>
+                </label>
+            </div>
+
+            <!-- Navegación principal -->
+            <nav class="navigation" role="navigation" arial-label="Navegación principal">
+                <p class="nav-title">PRINCIPAL</p>
+                <a href="#dashboard" class="nav-link active" aria-current="page">
+                    <span class="nav-icon" aria-hidden="true">🏠</span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+                <a href="#productos" class="nav-link">
+                    <span class="nav-icon" aria-hidden="true">📦</span>
+                    <span class="nav-text">Productos</span>
+                </a>
+                <a href="#inventario" class="nav-link">
+                    <span class="nav-icon" aria-hidden="true">💰</span>
+                    <span class="nav-text">Inventario</span>    
+                </a>
+                <a href="#ventas" class="nav-link">
+                    <span class="nav-icon" aria-hidden="true">📊</span>
+                    <span class="nav-text">Ventas</span>
+                </a>
+                <p class="nav-title">GESTIÓN</p>
+                <a href="#proveedores" class="nav-link">
+                    <span class="nav-icon" aria-hidden="true">👤</span>
+                    <span class="nav-text">Proveedores</span>
+                </a>
+                <a href="#reportes" class="nav-link">
+                    <span class="nav-icon" aria-hidden="true">📈</span>
+                    <span class="nav-text">Reportes</span>
+                </a>
+                <a href="#configuracion" class="nav-link">
+                    <span class="nav-icon" aria-hidden="true">⚙️</span>
+                    <span class="nav-text">Configuración</span>
+                </a>
+            </nav>
+
+
+
+         </aside>
+    </div>
+
+</body>
+</html>
