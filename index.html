@@ -18,9 +18,9 @@
     >
     <div class="dashboard">
         <!-- Sidebar -->
-         <aside class="sidebar" id="sidebar" aria-label="Barra lateral de navegación">
+        <aside class="sidebar" id="sidebar" aria-label="Barra lateral de navegación">
             <div class="sidebar-header">
-                <a href="#" class="brand" arial-label="StockFlow inicio">
+                <a href="#" class="brand" aria-label="StockFlow inicio">
                     <span class="brand-icon" aria-hidden="true">S</span>
                     <span class="brand-name">Stock <span>Flow</span></span>
                 </a>
@@ -35,7 +35,7 @@
             </div>
 
             <!-- Navegación principal -->
-            <nav class="navigation" role="navigation" arial-label="Navegación principal">
+            <nav class="navigation" role="navigation" aria-label="Navegación principal">
                 <p class="nav-title">PRINCIPAL</p>
                 <a href="#dashboard" class="nav-link active" aria-current="page">
                     <span class="nav-icon" aria-hidden="true">🏠</span>
@@ -68,10 +68,505 @@
                 </a>
             </nav>
 
+            <!--Información del usuario -->
+
+            <div class="sidebar-user">
+                <div class="user-avatar" aria-hidden="true">
+                    GH
+                </div>
+                <div class="user-info">
+                    <strong>Administrador</strong>
+                    <span>Administrador</span>
+                </div>
+                <button class="user-menu" type="button" aria-label="Abrir opciones de usuario">
+                    ⋮
+                    <span aria-hidden="true">⋯</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+        <div class="page-content">
+
+            <!--header-->
+
+            <header class="topbar">
+                <div class="topbar-left">
+                    <label for="sidebar-toggle" class="mobile-menu" aria-label="Abrir menú de navegación">
+                        <span aria-hidden="true">☰</span>
+                    </label>
+                    <div>
+                        <p class="breadcrumb">Panel administrativo</p>
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+
+                <div class="topbar-actions">
+                    <button class="icon-button" type="button" aria-label="Ver notificaciones">
+                        <span aria-hidden="true">♢</span>
+                        <span class="notification-dot"></span>
+                    </button>
+                    <div class="profile">
+                        <div class="profile-avatar" aria-hidden="true">
+                            GH
+                        </div>
+                        <div class="profile-data">
+                            <strong>Gabriela</strong>
+                            <span>Administrador</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!--main-->
+            <main class="main-content" id="dashboard" role="main">
+                <!--Introducción-->
+                <section class="welcome-section">
+                    <div>
+                        <p class="eyebrown">RESUMEN GENERAL</p>
+                        <h2>Resumen del inventario</h2>
+                        <p class="section-descrption">Consulta el estado de tus prductos, ventas e inventario</p>
+                    </div>
+                    <button class="primary-button" type="button"> 
+                        <span aria-hidden="true">+</span>
+                        Añadir producto
+                    </button>
+                </section>
+
+                <!--Tarjetas KPI-->
+                <section class="stats-grid" aria-label="Indicadores principales">
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon blue">
+                                <span aria-hidden="true">▦</span>
+                            </div>
+                            <span class="stat-label">Productos</span>
+                        </div>
+                        <div class="stat-content">
+                            <strong>1,284</strong>
+                            <span class="stat-change positive">↑ 12.5%</span>
+                        </div>
+                        <p>vs. mes anterior</p>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon green">
+                                <span aria-hidden="true">$</span>
+                            </div>
+                            <span class="stat-label">Ventas del mes</span>
+                        </div>
+                        <div class="stat-conten">
+                            <strong>$48.560.000</strong>
+                            <span class="stat-change positive">↑ 8.2%</span>
+                        </div>
+                        <p>vs. mes anterior</p>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon orange">
+                                <span aria-hidden="true">!</span>
+                            </div>
+                            <span class="stat-label">Stock bajo</span>
+                        </div>
+                        <div class="stat-content">
+                            <strong>24</strong>
+                            <span class="stat-change negative">↓ 3.1%</span>
+                        </div>
+                        <p>Productos requiere atención</p>
+                    </article>
+                    <article class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon purple">
+                                <span aria-hidden="true">↗</span>
+                            </div>
+                            <span class="stat-label">Ganancia</span>
+                        </div>
+                        <div class="stat-content">
+                            <strong>$12.8M</strong>
+                            <span class="stat-change positive">↑ 15.4%</span>
+                        </div>
+                        <p>margen mensual</p>
+                    </article>
+                </section>
+
+                <!--Gráfico + alertas-->
+                <section class="analytics-grid">
+                    <!--grafico-->
+                    <article class="panel slae-panel" id="ventas">
+                        <div class="panel-header">
+                            <div>
+                                <h3>Ventas mensuales</h3>
+                                <p>Rendimiento de los últimos 7 meses</p>
+                            </div>
+
+                            <select class="period-select" aria-label="Seleccionar período">
+                                <option>Últimos 7 meses</option>
+                                <option>Este año</option>
+                                <option>Últimos 30 días</option>
+                            </select>
+
+                            <div class="chart" role="img" aria-label="Gráfico de barras que muestra las ventas mensuales">
+                                <div class="chart-y-axis">
+                                    <span>$10M</span>
+                                    <span>$8M</span>
+                                    <span>$6M</span>
+                                    <span>$4M</span>
+                                    <span>$2M</span>
+                                    <span>$0M</span>
+                                </div>
+                                <div class="chart-area">
+                                    <div class="grid-lines">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="bars">
+                                        <div class="bar-item">
+                                            <div class="bar" style="height: 52%;" title="Enero: $5.2M"></div>
+                                            <span>Ene</span>
+                                        </div>
+                                        <div class="bar-item">
+                                            <div class="bar" style="height: 66%;" title="Febrero: $6.6M"></div>
+                                            <span>Feb</span>
+                                        </div>
+                                        <div class="bar-item">
+                                            <div class="bar" style="height: 58%;" title="Marzo: $5.8M"></div>
+                                            <span>Mar</span>
+                                        </div>
+                                        <div class="bar-item">
+                                            <div class="bar" style="height: 76%;" title="Abril: $7.6M"></div>
+                                            <span>Abr</span>
+                                        </div>
+                                        <div class="bar-item">
+                                            <div class="bar" style="height: 68%;" title="Mayo: $6.8M"></div>
+                                            <span>May</span>
+                                        </div>
+                                        <div class="bar-item">
+                                            <div class="bar" style="height: 87%;" title="Junio: $8.7M"></div>
+                                            <span>Jun</span>
+                                        </div>
+                                        <div class="bar-item">
+                                            <div class="bar" style="height: 94%;" title="Julio: $9.4M"></div>
+                                            <span>Jul</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!--alertas-->
+                    <article class="panel alerts-panel" id="inventario">
+                        <div class="panel-header">
+                            <div>
+                                <h3>Alertas de inventario</h3>
+                                <p>
+                                    Productos que necesitan atención
+                                </p>
+                            </div>
+
+                            <a href="#productos" class="view-all">
+                                Ver todos
+                            </a>
+                        </div>
+                        <div class="alerts-list">
+                            <div class="alert-item">
+                                <div class="alert-product-icon">
+                                    HP
+                                </div>
+                                <div class="alert-info">
+                                    <strong>
+                                        Audífonos Pro
+                                    </strong>
+
+                                    <span>
+                                        Solo quedan 3 unidades
+                                    </span>
+                                </div>
+                                <span class="alert-badge critical">
+                                    Crítico
+                                </span>
+                            </div>
+                            <div class="alert-item">
+                                <div class="alert-product-icon">
+                                    KB
+                                </div>
+                                <div class="alert-info">
+                                    <strong>
+                                        Teclado Bluetooth
+                                    </strong>
+
+                                    <span>
+                                        Solo quedan 7 unidades
+                                    </span>
+                                </div>
+                                <span class="alert-badge warning">
+                                    Bajo
+                                </span>
+                            </div>
+                            <div class="alert-item">
+                                <div class="alert-product-icon">
+                                    MS
+                                </div>
+                                <div class="alert-info">
+                                    <strong>
+                                        Mouse inalámbrico
+                                    </strong>
+
+                                    <span>
+                                        Solo quedan 9 unidades
+                                    </span>
+                                </div>
+                                <span class="alert-badge warning">
+                                    Bajo
+                                </span>
+                            </div>
+                            <div class="alert-item">
+                                <div class="alert-product-icon">
+                                    CM
+                                </div>
+                                <div class="alert-info">
+                                    <strong>
+                                        Cámara HD
+                                    </strong>
+                                    <span>
+                                        Solo quedan 5 unidades
+                                    </span>
+                                </div>
+                                <span class="alert-badge critical">
+                                    Crítico
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </section>
 
 
-         </aside>
+                <!-- tabla de productos-->
+                <section class="panel products-panel" id="productos">
+                    <div class="panel-header">
+                        <div>
+                            <h3>Productos recientes</h3>
+                            <p>
+                                Últimos productos actualizados
+                            </p>
+                        </div>
+                        <a href="#productos" class="view-all">
+                            Ver inventario completo
+                        </a>
+                    </div>
+                    <div class="table-wrapper">
+                        <table>
+                            <caption class="sr-only">
+                                Lista de productos recientes
+                                y su estado de inventario
+                            </caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        Producto
+                                    </th>
+
+                                    <th scope="col">
+                                        Categoría
+                                    </th>
+
+                                    <th scope="col">
+                                        SKU
+                                    </th>
+
+                                    <th scope="col">
+                                        Stock
+                                    </th>
+
+                                    <th scope="col">
+                                        Precio
+                                    </th>
+
+                                    <th scope="col">
+                                        Estado
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="product-cell">
+
+                                            <div class="product-image">
+                                                HP
+                                            </div>
+                                            <div>
+                                                <strong>
+                                                    Audífonos Pro
+                                                </strong>
+
+                                                <span>
+                                                    Audio
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                    <td>Electrónica</td>
+                                    <td>HP-00124</td>
+                                    <td>
+                                        <strong>3</strong>
+                                    </td>
+                                    <td>$249.900</td>
+                                    <td>
+                                        <span class="status critical">
+                                            Stock crítico
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="product-cell">
+
+                                            <div class="product-image">
+                                                KB
+                                            </div>
+                                            <div>
+                                                <strong>
+                                                    Teclado Bluetooth
+                                                </strong>
+
+                                                <span>
+                                                    Periféricos
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Accesorios</td>
+                                    <td>KB-00982</td>
+                                    <td>
+                                        <strong>7</strong>
+                                    </td>
+                                    <td>$189.900</td>
+                                    <td>
+                                        <span class="status warning">
+                                            Stock bajo
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="product-cell">
+                                            <div class="product-image">
+                                                MS
+                                            </div>
+                                            <div>
+                                                <strong>
+                                                    Mouse inalámbrico
+                                                </strong>
+                                                <span>
+                                                    Periféricos
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Accesorios</td>
+                                    <td>MS-00457</td>
+                                    <td>
+                                        <strong>32</strong>
+                                    </td>
+                                    <td>$119.900</td>
+                                    <td>
+                                        <span class="status available">
+                                            Disponible
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="product-cell">
+                                            <div class="product-image">
+                                                CM
+                                            </div>
+                                            <div>
+                                                <strong>
+                                                    Cámara HD
+                                                </strong>
+                                                <span>
+                                                    Video
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Electrónica</td>
+                                    <td>CM-00731</td>
+                                    <td>
+                                        <strong>5</strong>
+                                    </td>
+                                    <td>$329.900</td>
+                                    <td>
+                                        <span class="status critical">
+                                            Stock crítico
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="product-cell">
+                                            <div class="product-image">
+                                                MN
+                                            </div>
+                                            <div>
+                                                <strong>
+                                                    Monitor 24"
+                                                </strong>
+                                                <span>
+                                                    Pantallas
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Computación</td>
+                                    <td>MN-00214</td>
+                                    <td>
+                                        <strong>18</strong>
+                                    </td>
+                                    <td>$849.900</td>
+                                    <td>
+                                        <span class="status available">
+                                            Disponible
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+
+
+            <!--footer-->
+            <footer class="footer">
+                <p>
+                    © 2026 StockFlow. Dashboard administrativo.
+                </p>
+                <div class="footer-links">
+                    <a href="#privacidad">
+                        Privacidad
+                    </a>
+
+                    <a href="#ayuda">
+                        Centro de ayuda
+                    </a>
+
+                    <span>
+                        Sistema actualizado
+                    </span>
+                </div>
+            </footer>
+        </div>
     </div>
+                    
 
 </body>
 </html>
